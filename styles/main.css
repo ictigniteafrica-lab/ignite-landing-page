@@ -230,7 +230,7 @@ body {
 
 /* Enhanced Buttons */
 .btn-primary {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
   background: var(--gradient-button);
@@ -240,6 +240,9 @@ body {
   font-size: var(--font-size-sm);
   letter-spacing: var(--letter-spacing-wide);
   text-transform: uppercase;
+  border-radius: 12px;
+  padding: 0.875rem 1.75rem;
+  box-shadow: var(--shadow-md);
 }
 
 .btn-primary::before {
