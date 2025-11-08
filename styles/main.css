@@ -90,6 +90,13 @@ body {
   background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    padding: 6rem 0;
+  }
 }
 
 .hero-bg::before {
@@ -157,12 +164,14 @@ body {
 
 /* Enhanced Stat Cards */
 .stat-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  background: var(--gradient-card);
-  border: 2px solid transparent;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 100%);
+  border: 2px solid rgba(13,157,88,0.1);
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .stat-card::before {
@@ -171,20 +180,37 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background: var(--gradient-primary);
   transform: scaleX(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.5s ease;
   transform-origin: left;
+  border-radius: 16px 16px 0 0;
+}
+
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(13,157,88,0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
 .stat-card:hover::before {
   transform: scaleX(1);
 }
 
+.stat-card:hover::after {
+  opacity: 1;
+}
+
 .stat-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: var(--shadow-xl), 0 0 30px rgba(13,157,88,0.15);
   border-color: var(--brand-green);
   background: var(--bg-white);
 }
@@ -198,6 +224,8 @@ body {
   font-weight: var(--font-weight-extrabold);
   font-size: var(--font-size-2xl);
   letter-spacing: var(--letter-spacing-tight);
+  position: relative;
+  z-index: 1;
 }
 
 /* Enhanced Buttons */
@@ -259,13 +287,15 @@ body {
 
 /* Enhanced Feature Cards */
 .feature-card {
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   position: relative;
-  background: var(--bg-white);
-  border: 2px solid var(--border-light);
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(249,250,251,0.9) 100%);
+  border: 2px solid rgba(13,157,88,0.12);
+  border-radius: 16px;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
 }
 
 .feature-card::before {
@@ -274,11 +304,13 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
+  height: 5px;
   background: var(--gradient-primary);
   transform: scaleX(0);
-  transition: transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: left;
+  border-radius: 16px 16px 0 0;
+  z-index: 2;
 }
 
 .feature-card:hover::before {
@@ -292,11 +324,12 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--gradient-hero);
+  background: linear-gradient(135deg, rgba(13,157,88,0.08) 0%, rgba(245,166,35,0.05) 100%);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s ease;
   pointer-events: none;
   border-radius: inherit;
+  z-index: 0;
 }
 
 .feature-card:hover::after {
@@ -304,10 +337,15 @@ body {
 }
 
 .feature-card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-12px) scale(1.03);
   border-color: var(--brand-green);
-  box-shadow: var(--shadow-xl);
+  box-shadow: var(--shadow-xl), 0 8px 40px rgba(13,157,88,0.2);
   background: var(--bg-white);
+}
+
+.feature-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .feature-card h4 {
@@ -327,13 +365,15 @@ body {
 
 /* Enhanced Curriculum Cards */
 .curriculum-card {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  background: var(--bg-white);
-  border: 2px solid var(--border-light);
-  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 100%);
+  border: 2px solid rgba(13,157,88,0.1);
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  padding: 2rem;
 }
 
 .curriculum-card::before {
@@ -345,19 +385,45 @@ body {
   height: 100%;
   background: var(--gradient-primary);
   transform: scaleY(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: top;
+  border-radius: 20px 0 0 20px;
+  z-index: 2;
+}
+
+.curriculum-card::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(13,157,88,0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+  z-index: 0;
 }
 
 .curriculum-card:hover::before {
   transform: scaleY(1);
 }
 
+.curriculum-card:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
 .curriculum-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: var(--shadow-xl), 0 10px 50px rgba(13,157,88,0.18);
   border-color: var(--brand-green);
   background: var(--bg-white);
+}
+
+.curriculum-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .curriculum-card h4 {
@@ -371,13 +437,15 @@ body {
 
 /* Enhanced FAQ Items */
 .faq-item {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-  background: var(--bg-white);
-  border: 2px solid var(--border-light);
-  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 100%);
+  border: 2px solid rgba(13,157,88,0.1);
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
 }
 
 .faq-item::before {
@@ -386,22 +454,47 @@ body {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 5px;
   background: var(--gradient-primary);
   transform: scaleY(0);
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: top;
+  border-radius: 16px 0 0 16px;
+  z-index: 2;
+}
+
+.faq-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(13,157,88,0.06), rgba(245,166,35,0.03));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  z-index: 0;
 }
 
 .faq-item:hover::before {
   transform: scaleY(1);
 }
 
+.faq-item:hover::after {
+  opacity: 1;
+}
+
 .faq-item:hover {
-  background: linear-gradient(135deg, rgba(13,157,88,0.04), rgba(245,166,35,0.02));
-  transform: translateX(8px);
+  transform: translateX(10px) translateY(-2px);
   border-color: var(--brand-green);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg), 0 6px 30px rgba(13,157,88,0.15);
+  background: var(--bg-white);
+}
+
+.faq-item > * {
+  position: relative;
+  z-index: 1;
 }
 
 .faq-item h4 {
@@ -452,6 +545,34 @@ body {
   height: 60%;
 }
 
+/* Enhanced Form Card */
+.enhanced-form-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 100%);
+  border: 2px solid rgba(13,157,88,0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2rem 2rem 0 0;
+}
+
+.enhanced-form-card:hover {
+  box-shadow: var(--shadow-xl), 0 10px 40px rgba(13,157,88,0.15);
+  border-color: rgba(13,157,88,0.2);
+  transform: translateY(-2px);
+  transition: all 0.4s ease;
+}
+
 /* Enhanced Input Fields */
 input, select, textarea {
   font-family: var(--font-primary);
@@ -459,9 +580,15 @@ input, select, textarea {
   font-weight: var(--font-weight-normal);
   line-height: var(--line-height-normal);
   color: var(--text-primary);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 2px solid var(--border-light);
-  border-radius: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(13,157,88,0.15);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.9);
+  padding: 0.75rem 1rem;
+}
+
+input:hover, select:hover, textarea:hover {
+  border-color: rgba(13,157,88,0.3);
   background: var(--bg-white);
 }
 
@@ -474,16 +601,26 @@ input::placeholder, textarea::placeholder {
 label {
   font-family: var(--font-primary);
   font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-semibold);
   color: var(--text-primary);
   letter-spacing: var(--letter-spacing-normal);
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-input:focus, select:focus {
+input:focus + label,
+select:focus + label,
+label:has(+ input:focus),
+label:has(+ select:focus) {
+  color: var(--brand-green);
+}
+
+input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--brand-green);
-  box-shadow: 0 0 0 4px rgba(13,157,88,0.1), var(--shadow-sm);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(13,157,88,0.15), var(--shadow-md);
+  transform: translateY(-2px) scale(1.01);
   background: var(--bg-white);
 }
 
@@ -966,6 +1103,7 @@ footer .logo-img:hover {
 section {
   position: relative;
   scroll-margin-top: 120px;
+  padding: 4rem 0;
 }
 
 section:first-child {
@@ -973,7 +1111,35 @@ section:first-child {
 }
 
 section:nth-child(even) {
-  background: var(--bg-light);
+  background: linear-gradient(135deg, rgba(249,250,251,0.5) 0%, rgba(255,255,255,0.8) 100%);
+}
+
+@media (min-width: 1024px) {
+  section {
+    padding: 5rem 0;
+  }
+}
+
+/* Section Headings Enhancement */
+section h3 {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+section:nth-child(even) h3::after {
+  width: 80px;
 }
 
 /* Section IDs with proper spacing for anchor links */
@@ -1013,14 +1179,38 @@ section[id]::before {
 
 /* Enhanced Pricing Cards */
 .shadow-soft.hover\:shadow-lg {
-  background: var(--gradient-card);
-  border: 2px solid rgba(13,157,88,0.1);
+  background: linear-gradient(135deg, rgba(255,255,255,0.98) 0%, rgba(249,250,251,0.95) 100%);
+  border: 2px solid rgba(13,157,88,0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow-soft.hover\:shadow-lg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+  transform-origin: left;
+  border-radius: 20px 20px 0 0;
+}
+
+.shadow-soft.hover\:shadow-lg:hover::before {
+  transform: scaleX(1);
 }
 
 .shadow-soft.hover\:shadow-lg:hover {
   background: var(--bg-white);
   border-color: var(--brand-green);
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl), 0 12px 50px rgba(13,157,88,0.2);
 }
 
 /* Enhanced Footer */
