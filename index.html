@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ignite AfCFTA: Entrepreneurship & Innovation BootCamp</title>
+  <meta name="description" content="4-month blended Flagship Programme on the AfCFTA. Build export-ready strategies, join the AfCFTA Leadership Network, and become an AfCFTA Business Champion. Cohort starts Jan 2026." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="font-sans antialiased text-gray-800 bg-white">
+  
+  <div class="progress-bar" id="progressBar"></div>
+  
+  <div class="scroll-indicator" id="scrollTop">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </div>
+
+  <header class="enhanced-header">
+    <div class="header-container">
+      <a href="#home" class="logo-container">
+        <img src="assets/logo/logo.png" alt="Ignite Africa Logo" class="logo-img" />
+        <div class="logo-text">
+          <h1>Ignite Africa</h1>
+          <p>Igniting Intra-Africa Trade</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="#why" class="nav-link">Why AfCFTA</a>
+        <a href="#curriculum" class="nav-link">Curriculum</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#apply" class="nav-link nav-cta btn-primary">Apply Now</a>
+      </nav>
+      <button id="menuToggle" class="mobile-menu-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img src="assets/logo/logo.png" alt="Ignite Africa Logo" class="mobile-logo" />
+      <button id="menuClose" class="mobile-menu-close">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-nav">
+      <a href="#why" class="mobile-nav-link">Why AfCFTA</a>
+      <a href="#curriculum" class="mobile-nav-link">Curriculum</a>
+      <a href="#pricing" class="mobile-nav-link">Pricing</a>
+      <a href="#faq" class="mobile-nav-link">FAQ</a>
+      <a href="#apply" class="mobile-nav-link mobile-nav-cta btn-primary">Apply Now</a>
+    </nav>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="hero-bg py-12 lg:py-20 relative">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center relative z-10">
+      <div class="fade-in">
+        <p class="text-sm text-[var(--brand-gold)] font-semibold pulse flex items-center">
+          <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+          </svg>
+          AfCFTA Flagship Programme
+          <span class="mx-2">•</span>
+          Cohort Starts 26 January 2026
+        </p>
+        <h2 class="mt-4 text-3xl lg:text-4xl font-extrabold leading-tight text-hero">Entrepreneurship & Innovation BootCamp — <span class="text-[var(--brand-green)]">Igniting Intra Africa Trade</span></h2>
+        <p class="mt-4 text-gray-700 max-w-xl">A 4-month Blended Programme Combining Live Webinars and Self-Paced e-Modules to Equip Leaders, Entrepreneurs and Professionals with Skills & Mindset to Explore AfCFTA Business Opportunities. Build export strategies, map regional value chains, and lead trade action in your country.</p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-4">
+          <a id="apply" href="#apply-form" class="inline-block px-6 py-3 rounded bg-[var(--brand-green)] text-white font-semibold shadow-soft btn-primary">Apply Now for Cohort 1</a>
+          <a href="#curriculum" class="inline-block px-6 py-3 rounded border border-gray-200 text-gray-700 hover:border-[var(--brand-green)] hover:text-[var(--brand-green)] transition-all">View Curriculum</a>
+        </div>
+
+        <div class="mt-6 text-sm text-gray-600">
+          <p class="flex items-center flex-wrap gap-2">
+            <strong>Format:</strong>
+            <span class="flex items-center">
+              <svg class="w-3 h-3 mr-1 text-[var(--brand-green)]" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+              </svg>
+              4 months
+            </span>
+            <span>•</span>
+            <span>Blended learning</span>
+            <span>•</span>
+            <span>Certificate & Alumni Network</span>
+          </p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="p-4 bg-white border rounded text-center stat-card">
+            <div class="text-lg font-bold text-[var(--brand-green)]">4</div>
+            <div class="text-xs text-gray-500">Months</div>
+          </div>
+          <div class="p-4 bg-white border rounded text-center stat-card">
+            <div class="text-lg font-bold text-[var(--brand-green)]">10+</div>
+            <div class="text-xs text-gray-500">Expert Sessions</div>
+          </div>
+          <div class="p-4 bg-white border rounded text-center stat-card">
+            <div class="text-lg font-bold text-[var(--brand-green)]">AfCFTA</div>
+            <div class="text-xs text-gray-500">Practical Toolkit</div>
+          </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="mt-8 countdown-container">
+          <div class="countdown-card">
+            <div class="countdown-header">
+              <svg class="w-5 h-5 text-[var(--brand-gold)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <h4 class="countdown-title">Early-Bird Registration Ends In</h4>
+            </div>
+            <div id="earlyBirdCountdown" class="countdown-timer">
+              <div class="countdown-item">
+                <div class="countdown-number" data-days>00</div>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number" data-hours>00</div>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number" data-minutes>00</div>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-separator">:</div>
+              <div class="countdown-item">
+                <div class="countdown-number" data-seconds>00</div>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="bg-white p-6 rounded-lg shadow-soft border fade-in">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <div class="text-xs text-gray-500">Next cohort</div>
+            <div class="text-lg font-semibold">26 January 2026</div>
+          </div>
+          <div class="text-right">
+            <div class="text-xs text-gray-500">Duration</div>
+            <div class="text-lg font-semibold">4 months</div>
+          </div>
+        </div>
+
+        <!-- Registration Deadline Countdown -->
+        <div class="countdown-card-small mb-4">
+          <div class="countdown-header-small">
+            <svg class="w-4 h-4 text-[var(--brand-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-xs font-semibold text-gray-700">Registration Deadline</span>
+          </div>
+          <div id="registrationCountdown" class="countdown-timer-small">
+            <span class="countdown-number-small" data-days>00</span>
+            <span class="countdown-separator-small">:</span>
+            <span class="countdown-number-small" data-hours>00</span>
+            <span class="countdown-separator-small">:</span>
+            <span class="countdown-number-small" data-minutes>00</span>
+            <span class="countdown-separator-small">:</span>
+            <span class="countdown-number-small" data-seconds>00</span>
+          </div>
+          <div class="countdown-labels-small">
+            <span>Days</span>
+            <span>Hours</span>
+            <span>Mins</span>
+            <span>Secs</span>
+          </div>
+        </div>
+
+        <div id="apply-form" class="scroll-target"></div>
+        <form class="mt-6 space-y-3">
+          <div>
+            <label class="text-xs text-gray-600">Full name</label>
+            <input id="nameInput" class="w-full mt-1 border rounded px-3 py-2" placeholder="e.g., Amina Okoro" />
+          </div>
+          <div>
+            <label class="text-xs text-gray-600">Email</label>
+            <input id="emailInput" class="w-full mt-1 border rounded px-3 py-2" placeholder="you@domain.com" type="email" />
+          </div>
+          <div>
+            <label class="text-xs text-gray-600">Country</label>
+            <input id="countryInput" class="w-full mt-1 border rounded px-3 py-2" placeholder="Country of residence" />
+          </div>
+          <div>
+            <label class="text-xs text-gray-600">Role</label>
+            <select id="roleSelect" class="w-full mt-1 border rounded px-3 py-2">
+              <option>Entrepreneur / SME</option>
+              <option>Policy / Government</option>
+              <option>Trade Support / NGO</option>
+              <option>Professional / Student</option>
+            </select>
+          </div>
+
+          <button type="button" id="submitBtn" class="w-full py-3 rounded bg-[var(--brand-green)] text-white font-semibold btn-primary">Express Interest</button>
+
+          <p class="text-xs text-gray-500 mt-2">Early-bird discounts. Limited scholarship seats available.</p>
+        </form>
+
+        <div class="mt-6 text-sm text-gray-600">
+          <p class="flex items-center flex-wrap gap-2">
+            <strong>Partners:</strong>
+            <span>Trade agencies</span>
+            <span>•</span>
+            <span>Universities</span>
+            <span>•</span>
+            <span>Industry sponsors</span>
+          </p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="why" class="py-12 lg:py-20">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-2">
+        <h3 class="text-2xl font-bold">Why this Flagship Programme?</h3>
+        <p class="mt-4 text-gray-700">The Ignite AfCFTA Bootcamp empowers Africa's entrepreneurs, policymakers, and business leaders to turn policy into Wealth & Growth. While the AfCFTA is the world's largest free trade area, its true potential lies beyond agreements — it lies in execution. This BootCamp equips participants with the practical knowledge, tools, and networks to transform AfCFTA frameworks into real business opportunities, export growth, and job creation across the continent. This programme turns awareness into action.</p>
+
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 border rounded feature-card">
+            <h4 class="font-semibold flex items-center">
+              <svg class="icon text-[var(--brand-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Practical
+            </h4>
+            <p class="text-sm text-gray-600 mt-2">Actionable templates, Export Plan Builders and Sector-Specific Workshops.</p>
+          </div>
+          <div class="p-4 border rounded feature-card">
+            <h4 class="font-semibold flex items-center">
+              <svg class="icon text-[var(--brand-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Pan-African
+            </h4>
+            <p class="text-sm text-gray-600 mt-2">Content and cases drawn from across Africa with a regional perspective.</p>
+          </div>
+          <div class="p-4 border rounded feature-card">
+            <h4 class="font-semibold flex items-center">
+              <svg class="icon text-[var(--brand-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+              Mentored
+            </h4>
+            <p class="text-sm text-gray-600 mt-2">Peer groups and mentor hours to support real export projects.</p>
+          </div>
+          <div class="p-4 border rounded feature-card">
+            <h4 class="font-semibold flex items-center">
+              <svg class="icon text-[var(--brand-green)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+              Certified
+            </h4>
+            <p class="text-sm text-gray-600 mt-2">Earn the AfCFTA Business Champion certificate and join the Ignite Africa Network.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="bg-white p-6 rounded border shadow-soft">
+        <h4 class="font-semibold">Who should join?</h4>
+        <ul class="mt-4 text-sm text-gray-600 space-y-2">
+          <li class="hover:text-[var(--brand-green)] transition-colors cursor-default flex items-start">
+            <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Entrepreneurs & SME Leaders aiming for export markets</span>
+          </li>
+          <li class="hover:text-[var(--brand-green)] transition-colors cursor-default flex items-start">
+            <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Trade Support Institutions & Chambers of Commerce</span>
+          </li>
+          <li class="hover:text-[var(--brand-green)] transition-colors cursor-default flex items-start">
+            <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Policy makers & Public Sector Officials</span>
+          </li>
+          <li class="hover:text-[var(--brand-green)] transition-colors cursor-default flex items-start">
+            <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Students & Professionals In ALL sectors seeking new opportunities.</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="curriculum" class="py-12 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <h3 class="text-2xl font-bold">Curriculum Overview</h3>
+      <p class="mt-3 text-gray-600 max-w-3xl">Four months of focused learning, each month combining 4 self-paced modules and 2 live interactive sessions for applied outcomes.</p>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white border rounded curriculum-card">
+          <h4 class="font-semibold">Month 1: Foundations of AfCFTA</h4>
+          <p class="text-sm text-gray-600 mt-2">4 e‑Modules + 2 live webinars</p>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>AfCFTA legal & institutional architecture</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Key AfCFTA Protocols</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>AfCTFTA and The Promise of Africa's Next Chapter</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="p-6 bg-white border rounded curriculum-card">
+          <h4 class="font-semibold">Month 2: Trade Facilitation & Promotion</h4>
+          <p class="text-sm text-gray-600 mt-2">4 e‑modules + 2 live workshops</p>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Dynamics of Intra-African Trade</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Customs Harmonization & Trade Gains</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Trade Facilitation Mechanisms</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="p-6 bg-white border rounded curriculum-card">
+          <h4 class="font-semibold">Month 3: Entrepreneurial Orientation</h4>
+          <p class="text-sm text-gray-600 mt-2">4 e‑modules + 2 Live Sessions</p>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Map Regional Value Chains</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Sector Selection & Entry Strategies</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Partnering and Scaling Across Borders</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="p-6 bg-white border rounded curriculum-card">
+          <h4 class="font-semibold">Month 4: From Strategy to Action</h4>
+          <p class="text-sm text-gray-600 mt-2">4 e‑modules + 2 masterclasses</p>
+          <ul class="mt-3 text-sm text-gray-600 space-y-2">
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Build an export‑oriented business plan</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Pitch and feedback sessions</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="icon-sm text-[var(--brand-green)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>90‑day implementation roadmap</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <h3 class="text-2xl font-bold">Fees & Scholarships</h3>
+      <p class="mt-3 text-gray-600">We offer flexible pricing and scholarship seats for underrepresented regions and groups.</p>
+
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 bg-white border rounded shadow-soft hover:shadow-lg transition-all">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm text-gray-500">Early Bird Standard</div>
+              <div class="text-xl font-bold text-[var(--brand-green)]">USD 68</div>
+            </div>
+            <div class="text-sm text-gray-500">Self-paced + live sessions</div>
+          </div>
+          <p class="mt-3 text-sm text-gray-600">Includes all modules, mentor hours & certificate.</p>
+        </div>
+
+        <div class="p-6 bg-white border rounded shadow-soft hover:shadow-lg transition-all">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-sm text-gray-500">Leadership Package</div>
+              <div class="text-xl font-bold text-[var(--brand-green)]">USD 198</div>
+            </div>
+            <div class="text-sm text-gray-500">Discounted Rate</div>
+          </div>
+          <p class="mt-3 text-sm text-gray-600">Special rate for certified Ignite members + referral benefits.</p>
+        </div>
+      </div>
+
+      <p class="mt-4 text-xs text-gray-500">Contact us for group bookings and sponsorship packages.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <h3 class="text-2xl font-bold">Frequently Asked Questions</h3>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-4 border rounded bg-white faq-item">
+          <h4 class="font-semibold">Do I need prior trade experience?</h4>
+          <p class="mt-2 text-sm text-gray-600">No. The programme is designed for all levels — from entrepreneurs exploring export options to trade professionals seeking applied knowledge.</p>
+        </div>
+        <div class="p-4 border rounded bg-white faq-item">
+          <h4 class="font-semibold">What is the time commitment?</h4>
+          <p class="mt-2 text-sm text-gray-600">Expect 4–6 hours per week: 2–3 hours for self-paced modules and a 1–2 hour live session.</p>
+        </div>
+        <div class="p-4 border rounded bg-white faq-item">
+          <h4 class="font-semibold">Will there be mentorship?</h4>
+          <p class="mt-2 text-sm text-gray-600">Yes — each cohort has peer groups and assigned mentors for practical support.</p>
+        </div>
+        <div class="p-4 border rounded bg-white faq-item">
+          <h4 class="font-semibold">Is there certification?</h4>
+          <p class="mt-2 text-sm text-gray-600">Graduates receive the AfCFTA Business Champion Certificate and access to the alumni network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t bg-white">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <div class="font-semibold">Ignite Africa</div>
+        <div class="text-sm text-gray-600">Igniting Africa's Next Chapter — AfCFTA Entrepreneurship & Innovation BootCamp</div>
+      </div>
+      <div class="text-sm text-gray-600">Contact: <a href="mailto:info@igniteafrica.org" class="text-[var(--brand-green)] hover:underline">info@igniteafrica.org</a></div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-sm text-gray-600 hover:text-[var(--brand-green)] transition-colors">Terms</a>
+        <a href="#" class="text-sm text-gray-600 hover:text-[var(--brand-green)] transition-colors">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Loading Overlay -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <p class="loader-text">Loading...</p>
+    </div>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
